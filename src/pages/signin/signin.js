@@ -4,13 +4,18 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  Callou
 } from "react-native";
 // import { Container } from './styles';
 
-export default function SignIn() {
+export default function SignIn({ navigation }) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+
+  const handleRegister = () => {
+    navigation.navigate("SignUp");
+  };
 
   return (
     <View style={styles.container}>
@@ -38,7 +43,7 @@ export default function SignIn() {
       <TouchableOpacity style={styles.loginBtn}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => handleRegister()}>
         <Text style={styles.loginText}>Cadastrar</Text>
       </TouchableOpacity>
     </View>

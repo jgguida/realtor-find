@@ -47,6 +47,12 @@ const Routes = createAppContainer(
         navigationOptions: {
           title: "Cadastrar Imóvel"
         }
+      },
+      Profile: {
+        screen: Profile,
+        navigationOptions: {
+          title: "Cadastrar Imóvel"
+        }
       }
     },
     {
