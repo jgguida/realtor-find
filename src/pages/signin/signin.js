@@ -5,7 +5,7 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  Callou
+  Image
 } from "react-native";
 // import { Container } from './styles';
 
@@ -17,9 +17,17 @@ export default function SignIn({ navigation }) {
     navigation.navigate("SignUp");
   };
 
+  const handleLogin = () => {
+    navigation.navigate("DashboardCorretor");
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>Realtor-Find</Text>
+      <Image
+        style={{ width: 150, height: 150 }}
+        source={require("../../../assets/logo.png")}
+      />
+      <Text style={styles.logo}>Login</Text>
       <View style={styles.inputView}>
         <TextInput
           style={styles.inputText}
@@ -37,14 +45,11 @@ export default function SignIn({ navigation }) {
           onChangeText={text => setPassword(text)}
         />
       </View>
-      <TouchableOpacity>
-        <Text style={styles.forgot}>Esqueci a senha</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity style={styles.loginBtn} onPress={() => handleLogin()}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => handleRegister()}>
-        <Text style={styles.loginText}>Cadastrar</Text>
+        <Text style={styles.registerText}>Cadastrar</Text>
       </TouchableOpacity>
     </View>
   );
@@ -53,19 +58,19 @@ export default function SignIn({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#003f5c",
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
   },
   logo: {
     fontWeight: "bold",
     fontSize: 50,
-    color: "#fb5b5a",
+    color: "#4AA3DB",
     marginBottom: 40
   },
   inputView: {
     width: "80%",
-    backgroundColor: "#465881",
+    backgroundColor: "#efefef",
     borderRadius: 25,
     height: 50,
     marginBottom: 20,
@@ -77,20 +82,25 @@ const styles = StyleSheet.create({
     color: "white"
   },
   forgot: {
-    color: "white",
+    color: "#4AA3DB",
     fontSize: 11
   },
   loginBtn: {
     width: "80%",
-    backgroundColor: "#fb5b5a",
+    backgroundColor: "#4AA3DB",
     borderRadius: 25,
     height: 50,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 40,
+    marginTop: 10,
     marginBottom: 10
   },
   loginText: {
-    color: "white"
+    color: "#fff",
+    padding: 10
+  },
+  registerText: {
+    color: "#4AA3DB",
+    padding: 10
   }
 });
