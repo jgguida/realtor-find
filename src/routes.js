@@ -12,6 +12,12 @@ import Profile from "./pages/profile";
 const Routes = createAppContainer(
   createStackNavigator(
     {
+      DashboardCliente: {
+        screen: DashboardCliente,
+        navigationOptions: {
+          title: "Dashboard Cliente"
+        }
+      },
       SignIn: {
         screen: SignIn,
         navigationOptions: {
@@ -22,12 +28,6 @@ const Routes = createAppContainer(
         screen: SignUp,
         navigationOptions: {
           title: "Registre-se"
-        }
-      },
-      DashboardCliente: {
-        screen: DashboardCliente,
-        navigationOptions: {
-          title: "Dashboard Cliente"
         }
       },
       DashboardCorretor: {
