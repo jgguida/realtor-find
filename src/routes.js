@@ -12,10 +12,10 @@ import Profile from "./pages/profile";
 const Routes = createAppContainer(
   createStackNavigator(
     {
-      DashboardCliente: {
-        screen: DashboardCliente,
+      DashboardCorretor: {
+        screen: DashboardCorretor,
         navigationOptions: {
-          title: "Dashboard Cliente"
+          title: "Dashboard Corretor"
         }
       },
       SignIn: {
@@ -30,10 +30,10 @@ const Routes = createAppContainer(
           title: "Registre-se"
         }
       },
-      DashboardCorretor: {
-        screen: DashboardCorretor,
+      DashboardCliente: {
+        screen: DashboardCliente,
         navigationOptions: {
-          title: "Dashboard Corretor"
+          title: "Dashboard Cliente"
         }
       },
       CadastroImovel: {
