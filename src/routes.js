@@ -1,5 +1,6 @@
-import { createAppContainer } from "react-navigation";
+import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
+import { createBottomTabNavigator } from "react-navigation-tabs";
 
 import SignIn from "./pages/signin";
 import SignUp from "./pages/signup";
@@ -10,14 +11,8 @@ import SingleImovel from "./pages/singleImovel";
 import Profile from "./pages/profile";
 
 const Routes = createAppContainer(
-  createStackNavigator(
-    {
-      DashboardCorretor: {
-        screen: DashboardCorretor,
-        navigationOptions: {
-          title: "Dashboard Corretor"
-        }
-      },
+  createSwitchNavigator({
+    Sign: createSwitchNavigator({
       SignIn: {
         screen: SignIn,
         navigationOptions: {
@@ -29,42 +24,63 @@ const Routes = createAppContainer(
         navigationOptions: {
           title: "Registre-se"
         }
+      }
+    }),
+    Corretor: createBottomTabNavigator({
+      DashboardCorretor: {
+        screen: DashboardCorretor,
+        navigationOptions: {
+          title: "Dashboard"
+        }
       },
+
+      Profile: {
+        screen: Profile,
+        navigationOptions: {
+          title: "Perfil"
+        }
+      }
+    }),
+    Proprietario: createBottomTabNavigator({
       DashboardCliente: {
         screen: DashboardCliente,
         navigationOptions: {
-          title: "Dashboard Cliente"
-        }
-      },
-      CadastroImovel: {
-        screen: CadastroImovel,
-        navigationOptions: {
-          title: "Cadastrar Imóvel"
-        }
-      },
-      SingleImovel: {
-        screen: SingleImovel,
-        navigationOptions: {
-          title: "Cadastrar Imóvel"
+          title: "Dashboard"
         }
       },
       Profile: {
         screen: Profile,
         navigationOptions: {
-          title: "Cadastrar Imóvel"
+          title: "Perfil"
         }
       }
-    },
-    {
-      defaultNavigationOptions: {
-        headerTintColor: "#fff",
-        headerBackTitleVisible: false,
-        headerStyle: {
-          backgroundColor: "#003f5c"
+    }),
+    Common: createStackNavigator(
+      {
+        SingleImovel: {
+          screen: SingleImovel,
+          navigationOptions: {
+            title: "Imovel"
+          }
+        },
+        CadastroImovel: {
+          screen: CadastroImovel,
+          navigationOptions: {
+            title: "Cadastrar Imóvel"
+          }
+        }
+      },
+      {
+        defaultNavigationOptions: {
+          headerTintColor: "#fff",
+          headerBackTitleVisible: false,
+          headerStyle: {
+            backgroundColor: "#003f5c"
+          }
         }
       }
-    }
-  )
+    )
+  })
 );
 
 export default Routes;
