@@ -13,7 +13,6 @@ import CadastroImovel from "./pages/cadastro-imovel";
 import SingleImovel from "./pages/singleImovel";
 import Profile from "./pages/profile";
 
-<<<<<<< HEAD
 const Routes =
   // (signedIn = false) =>
   createAppContainer(
