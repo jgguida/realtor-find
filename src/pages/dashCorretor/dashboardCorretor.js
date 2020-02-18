@@ -18,70 +18,97 @@ export default function DashboardCorretor({ navigation }) {
         style={styles.inputView}
         onPress={() => {
           navigation.navigate("SingleImovel", {
-            imovel_id: 1
+            imovel_id: "João Jacinto"
           });
         }}
       >
-        <View>
-          <Text>AGENDA</Text>
+        <View style={styles.infos}>
+          <Text>João Jacinto</Text>
+          <Text>Avenida das Dores, Jd. Amado</Text>
+          <Text>São Paulo - SP</Text>
+          <Text>Ultima Feedback: 17/02/2020</Text>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.price}>
+          <Text>Valor imóvel</Text>
+          <Text style={styles.priceText}>R$ 1.500.000</Text>
         </View>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.inputView}
         onPress={() => {
           navigation.navigate("SingleImovel", {
-            imovel_id: 2
+            imovel_id: "João Jacinto"
           });
         }}
       >
-        <View>
-          <Text>AGENDA</Text>
+        <View style={styles.infos}>
+          <Text>João Jacinto</Text>
+          <Text>Avenida das Dores, Jd. Amado</Text>
+          <Text>São Paulo - SP</Text>
+          <Text>Ultima Feedback: 17/02/2020</Text>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.price}>
+          <Text>Valor imóvel</Text>
+          <Text style={styles.priceText}>R$ 1.500.000</Text>
         </View>
       </TouchableOpacity>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
+      <TouchableOpacity
+        style={styles.inputView}
+        onPress={() => {
+          navigation.navigate("SingleImovel", {
+            imovel_id: "João Jacinto"
+          });
+        }}
+      >
+        <View style={styles.infos}>
+          <Text>João Jacinto</Text>
+          <Text>Avenida das Dores, Jd. Amado</Text>
+          <Text>São Paulo - SP</Text>
+          <Text>Ultima Feedback: 17/02/2020</Text>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.price}>
+          <Text>Valor imóvel</Text>
+          <Text style={styles.priceText}>R$ 1.500.000</Text>
         </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.inputView}
+        onPress={() => {
+          navigation.navigate("SingleImovel", {
+            imovel_id: "João Jacinto"
+          });
+        }}
+      >
+        <View style={styles.infos}>
+          <Text>João Jacinto</Text>
+          <Text>Avenida das Dores, Jd. Amado</Text>
+          <Text>São Paulo - SP</Text>
+          <Text>Ultima Feedback: 17/02/2020</Text>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.price}>
+          <Text>Valor imóvel</Text>
+          <Text style={styles.priceText}>R$ 1.500.000</Text>
         </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.inputView}
+        onPress={() => {
+          navigation.navigate("SingleImovel", {
+            imovel_id: "João Jacinto"
+          });
+        }}
+      >
+        <View style={styles.infos}>
+          <Text>João Jacinto</Text>
+          <Text>Avenida das Dores, Jd. Amado</Text>
+          <Text>São Paulo - SP</Text>
+          <Text>Ultima Feedback: 17/02/2020</Text>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.price}>
+          <Text>Valor imóvel</Text>
+          <Text style={styles.priceText}>R$ 1.500.000</Text>
         </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
-        </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
-        </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -90,53 +117,43 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    backgroundColor: "#fff",
+    backgroundColor: "#efefef",
     alignItems: "flex-start",
     justifyContent: "flex-start",
     padding: 10
   },
   titulo: {
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: 25,
     color: "#4AA3DB",
+    marginTop: 35,
     marginBottom: 30,
-    borderBottomColor: "#efefef",
+    alignSelf: "center",
+    borderBottomColor: "#7DCAFB",
     borderBottomWidth: 2,
     alignItems: "flex-start"
   },
   inputView: {
-    width: "80%",
-    backgroundColor: "#efefef",
-    borderRadius: 25,
-    height: 50,
+    width: "90%",
+    backgroundColor: "#fff",
+    borderRadius: 5,
     marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 10,
+    marginLeft: "5%",
+    borderColor: "#C8C8C8",
+    borderWidth: 1
+  },
+  price: {
+    borderLeftColor: "#C8C8C8",
+    borderLeftWidth: 1,
     justifyContent: "center",
-    padding: 20
+    padding: 10,
+    alignItems: "center"
   },
-  inputText: {
-    height: 50,
-    color: "white"
-  },
-  forgot: {
-    color: "#4AA3DB",
-    fontSize: 11
-  },
-  loginBtn: {
-    width: "80%",
-    backgroundColor: "#4AA3DB",
-    borderRadius: 25,
-    height: 50,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 10,
-    marginBottom: 10
-  },
-  loginText: {
-    color: "#fff",
-    padding: 10
-  },
-  registerText: {
-    color: "#4AA3DB",
-    padding: 10
+  priceText: {
+    fontSize: 14,
+    fontWeight: "bold"
   }
 });
