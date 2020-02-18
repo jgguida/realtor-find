@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
-import React from "react";
->>>>>>> 1f069e50cf119d58261bd2a68236a13b0d47c97e
+
 import {
   StyleSheet,
   Text,
@@ -11,7 +8,6 @@ import {
   TouchableOpacity,
   Image
 } from "react-native";
-<<<<<<< HEAD
 
 // import { Container } from './styles';
 
