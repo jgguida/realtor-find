@@ -12,10 +12,11 @@ import Profile from "./pages/profile";
 const Routes = createAppContainer(
   createStackNavigator(
     {
-      Profile: {
-        screen: Profile,
+      SignIn: {
+        screen: SignIn,
         navigationOptions: {
-          title: "Perfil"
+          title: "Login"
+
 
         }
       },
@@ -49,10 +50,10 @@ const Routes = createAppContainer(
           title: "Cadastrar Imóvel"
         }
       },
-      SignIn: {
-        screen: SignIn,
+      Profile: {
+        screen: Profile,
         navigationOptions: {
-          title: "Login"
+          title: "Perfil"
         }
       }
     },

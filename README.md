@@ -4,7 +4,4 @@
 
 ### Projeto criado no Hackaton Idealizado Pela Shawee
 
-
-
-
 **Integrantes**
