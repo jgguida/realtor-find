@@ -36,8 +36,8 @@ Escaneie o QR Code que aparece na lateral usando o Aplicativo
 
 **Integrantes**
 
-@cristianodmtsb
-@Jonatha-Varjao
-@jgguida
-@LPatiele
-@diaugust
+"@cristianodmtsb"
+"@Jonatha-Varjao"
+"@jgguida"
+"@LPatiele"
+"@diaugust"
