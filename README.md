@@ -35,9 +35,10 @@ Acesse: [https://play.google.com/store/apps/details?id=host.exp.exponent](https:
 Escaneie o QR Code que aparece na lateral usando o Aplicativo
 
 **Integrantes**
+Team 23 - Teoria do Caos
 
-"@cristianodmtsb"
-"@Jonatha-Varjao"
-"@jgguida"
-"@LPatiele"
-"@diaugust"
+[@cristianodmtsb](https://github.com/cristianodmtsb)
+[@Jonatha-Varjao](https://github.com/Jonatha-Varjao)
+[@jgguida](https://github.com/jgguida)
+[@LPatiele](https://github.com/LPatiele)
+[@diaugust](https://github.com/diaugust)
