@@ -22,20 +22,20 @@ const Routes =
   createAppContainer(
     createSwitchNavigator(
       {
-        CadastroImovel: {
-          screen: createStackNavigator({
-            CadastroImovel,
-            CadastroStep2,
-            CadastroStep3,
-            CadastroStep4
-          }),
-          navigationOptions: {
-            title: "Cadastrar Imóvel",
-            tabBarIcon: (
-              <Icon name="assignment-turned-in" size={20} color={"#4AA3DB"} />
-            )
+        Sign: createSwitchNavigator({
+          SignIn: {
+            screen: SignIn,
+            navigationOptions: {
+              title: "Login"
+            }
+          },
+          SignUp: {
+            screen: SignUp,
+            navigationOptions: {
+              title: "Registre-se"
+            }
           }
-        },
+        }),
         Proprietario: createBottomTabNavigator({
           DashboardCliente: {
             screen: DashboardCliente,
@@ -44,7 +44,40 @@ const Routes =
               tabBarIcon: <Icon name="home" size={20} color={"#4AA3DB"} />
             }
           },
-
+          CadastroImovel: {
+            screen: createStackNavigator({
+              CadastroImovel: {
+                screen: CadastroImovel,
+                navigationOptions: {
+                  title: "Cadastrar Imóvel"
+                }
+              },
+              CadastroStep2: {
+                screen: CadastroStep2,
+                navigationOptions: {
+                  title: "Adicionar Detalhes"
+                }
+              },
+              CadastroStep3: {
+                screen: CadastroStep3,
+                navigationOptions: {
+                  title: "Escolha Diferenciais"
+                }
+              },
+              CadastroStep4: {
+                screen: CadastroStep4,
+                navigationOptions: {
+                  title: "Seu Corretor Ideal"
+                }
+              }
+            }),
+            navigationOptions: {
+              title: "Cadastrar Imóvel",
+              tabBarIcon: (
+                <Icon name="assignment-turned-in" size={20} color={"#4AA3DB"} />
+              )
+            }
+          },
           Profile: {
             screen: Profile,
             navigationOptions: {
@@ -57,7 +90,8 @@ const Routes =
           DashboardCorretor: {
             screen: createStackNavigator({
               DashboardCorretor: {
-                screen: DashboardCorretor
+                screen: DashboardCorretor,
+                title: "Dashboard"
               },
               SingleImovel: {
                 screen: SingleImovel,
@@ -77,20 +111,6 @@ const Routes =
             navigationOptions: {
               title: "Perfil",
               tabBarIcon: <Icon name="person" size={20} color={"#4AA3DB"} />
-            }
-          }
-        }),
-        Sign: createSwitchNavigator({
-          SignIn: {
-            screen: SignIn,
-            navigationOptions: {
-              title: "Login"
-            }
-          },
-          SignUp: {
-            screen: SignUp,
-            navigationOptions: {
-              title: "Registre-se"
             }
           }
         })
