@@ -2,7 +2,7 @@
 
 ![Corretor Ideal](https://i.imgur.com/eHbcthK.png)
 
-Neste projeto de teste, foram usadas técnicas de:
+Com a dificuldade de muitos proprietários encontrarem bons corretores e de corretores encontrarem bons imóveis que correspondam a seus contatos, nós criamos uma solução que vai unir proprietários com corretores selecionados de forma simples e assertiva, aumentando a qualidade de atendimento e de venda de imóveis.
 
 - ReactJs
 - Expo
