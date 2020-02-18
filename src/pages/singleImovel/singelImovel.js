@@ -14,62 +14,52 @@ export default function SingleImovel({ navigation }) {
   const imovel_id = navigation.getParam("imovel_id");
   return (
     <View style={styles.container}>
-      <View>
-        <Text>Imovel {imovel_id}</Text>
-      </View>
-      <Text style={styles.titulo}>Feedbacks do Imóvel</Text>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
+      <View style={styles.totalView}>
+        <View style={styles.descImovel}>
+          <Text style={styles.priceText}>Cliente: {imovel_id}</Text>
+          <Text>Avenida das Dores, Jd. Amado</Text>
+          <Text>São Paulo - SP</Text>
+          <Text>Último Feedback: 17/02/2020</Text>
+          <Text>Tipo: Apartamento</Text>
+          <Text>Metragem: 250m²</Text>
+          <View style={styles.valorImovel}>
+            <Text style={styles.textValor}>Valor:</Text>
+            <Text style={styles.priceValor}>R$ 1.500.00</Text>
+          </View>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+
+        <View style={styles.inputView}>
+          <View style={styles.price}>
+            <Text style={styles.priceText}>17</Text>
+            <Text>FEV</Text>
+            <Text>2020</Text>
+          </View>
+          <View style={styles.infos}>
+            <Text>AGENDAMENTO</Text>
+            <Text>Agendamento do imóvel realizado</Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
+        <View style={styles.inputView}>
+          <View style={styles.price}>
+            <Text style={styles.priceText}>17</Text>
+            <Text>FEV</Text>
+            <Text>2020</Text>
+          </View>
+          <View style={styles.infos}>
+            <Text>AGENDAMENTO</Text>
+            <Text>Agendamento do imóvel realizado</Text>
+          </View>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
-        </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
-        </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
-        </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
-        </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
-        </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
-        </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
-        </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
-        </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.inputView}>
+          <View style={styles.price}>
+            <Text style={styles.priceText}>17</Text>
+            <Text>FEV</Text>
+            <Text>2020</Text>
+          </View>
+          <View style={styles.infos}>
+            <Text>AGENDAMENTO</Text>
+            <Text>Agendamento do imóvel realizado</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -80,53 +70,74 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    backgroundColor: "#fff",
+    backgroundColor: "#efefef",
     alignItems: "flex-start",
     justifyContent: "flex-start",
     padding: 10
   },
   titulo: {
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: 25,
     color: "#4AA3DB",
+    marginTop: 15,
     marginBottom: 30,
-    borderBottomColor: "#efefef",
+    alignSelf: "center",
+    borderBottomColor: "#7DCAFB",
     borderBottomWidth: 2,
     alignItems: "flex-start"
   },
+  totalView: {
+    width: "90%",
+    backgroundColor: "#fff",
+    borderRadius: 5,
+    padding: 10,
+    marginLeft: "5%",
+    borderColor: "#C8C8C8",
+    borderWidth: 1
+  },
+  descImovel: {
+    padding: 10,
+    justifyContent: "flex-start"
+  },
   inputView: {
-    width: "80%",
-    backgroundColor: "#efefef",
-    borderRadius: 25,
-    height: 50,
+    width: "100%",
+    backgroundColor: "#FFFFA5",
+    borderRadius: 5,
     marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 10,
+    borderColor: "#C8C8C8",
+    borderWidth: 1
+  },
+  price: {
+    borderRightColor: "#C8C8C8",
+    backgroundColor: "#fff",
+    borderRightWidth: 1,
     justifyContent: "center",
-    padding: 20
-  },
-  inputText: {
-    height: 50,
-    color: "white"
-  },
-  forgot: {
-    color: "#4AA3DB",
-    fontSize: 11
-  },
-  loginBtn: {
-    width: "80%",
-    backgroundColor: "#4AA3DB",
-    borderRadius: 25,
-    height: 50,
+    padding: 10,
     alignItems: "center",
-    justifyContent: "center",
-    marginTop: 10,
-    marginBottom: 10
+    width: "25%"
   },
-  loginText: {
-    color: "#fff",
-    padding: 10
+  priceText: {
+    fontSize: 25,
+    fontWeight: "bold"
   },
-  registerText: {
-    color: "#4AA3DB",
-    padding: 10
+  infos: {
+    justifyContent: "center"
+  },
+  valorImovel: {
+    flexDirection: "row",
+    alignItems: "flex-end",
+    marginBottom: 20
+  },
+  textValor: {
+    fontSize: 12,
+    fontWeight: "bold",
+    marginRight: 10
+  },
+  priceValor: {
+    fontSize: 17,
+    fontWeight: "bold"
   }
 });
