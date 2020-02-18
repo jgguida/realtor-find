@@ -35,3 +35,9 @@ Acesse: [https://play.google.com/store/apps/details?id=host.exp.exponent](https:
 Escaneie o QR Code que aparece na lateral usando o Aplicativo
 
 **Integrantes**
+
+@cristianodmtsb
+@Jonatha-Varjao
+@jgguida
+@LPatiele
+@diaugust
