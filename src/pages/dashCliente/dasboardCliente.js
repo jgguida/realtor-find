@@ -14,58 +14,38 @@ export default function DashboardCliente() {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Seus Feedbacks</Text>
+
       <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
+        <View style={styles.price}>
+          <Text style={styles.priceText}>17</Text>
+          <Text>FEV</Text>
+          <Text>2020</Text>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.infos}>
+          <Text>AGENDAMENTO</Text>
+          <Text>Agendamento do imóvel realizado</Text>
         </View>
       </View>
       <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
+        <View style={styles.price}>
+          <Text style={styles.priceText}>17</Text>
+          <Text>FEV</Text>
+          <Text>2020</Text>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
-        </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
-        </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.infos}>
+          <Text>AGENDAMENTO</Text>
+          <Text>Agendamento do imóvel realizado</Text>
         </View>
       </View>
       <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
+        <View style={styles.price}>
+          <Text style={styles.priceText}>17</Text>
+          <Text>FEV</Text>
+          <Text>2020</Text>
         </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
-        </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
-        </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
-        </View>
-      </View>
-      <View style={styles.inputView}>
-        <View>
-          <Text>AGENDA</Text>
-        </View>
-        <View>
-          <Text>Agendamento Marcado</Text>
-          <Text>Para o dia: 22/02/2020 às 15:45</Text>
+        <View style={styles.infos}>
+          <Text>AGENDAMENTO</Text>
+          <Text>Agendamento do imóvel realizado</Text>
         </View>
       </View>
     </View>
@@ -76,53 +56,61 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    backgroundColor: "#fff",
+    backgroundColor: "#efefef",
     alignItems: "flex-start",
     justifyContent: "flex-start",
     padding: 10
   },
   titulo: {
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: 25,
     color: "#4AA3DB",
-    marginBottom: 30,
-    borderBottomColor: "#efefef",
-    borderBottomWidth: 2,
-    alignItems: "flex-start"
+    marginTop: 35,
+    marginBottom: 30
+  },
+  descImovel: {
+    padding: 10,
+    justifyContent: "flex-start"
   },
   inputView: {
-    width: "80%",
-    backgroundColor: "#efefef",
-    borderRadius: 25,
-    height: 50,
+    width: "90%",
+    backgroundColor: "#FFFFA5",
+    borderRadius: 5,
     marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 10,
+    borderColor: "#C8C8C8",
+    borderWidth: 1
+  },
+  price: {
+    borderRightColor: "#C8C8C8",
+    backgroundColor: "#fff",
+    borderRightWidth: 1,
     justifyContent: "center",
-    padding: 20
-  },
-  inputText: {
-    height: 50,
-    color: "white"
-  },
-  forgot: {
-    color: "#4AA3DB",
-    fontSize: 11
-  },
-  loginBtn: {
-    width: "80%",
-    backgroundColor: "#4AA3DB",
-    borderRadius: 25,
-    height: 50,
+    padding: 10,
     alignItems: "center",
-    justifyContent: "center",
-    marginTop: 10,
-    marginBottom: 10
+    width: "25%"
   },
-  loginText: {
-    color: "#fff",
-    padding: 10
+  priceText: {
+    fontSize: 25,
+    fontWeight: "bold"
   },
-  registerText: {
-    color: "#4AA3DB",
-    padding: 10
+  infos: {
+    justifyContent: "center"
+  },
+  valorImovel: {
+    flexDirection: "row",
+    alignItems: "flex-end",
+    marginBottom: 20
+  },
+  textValor: {
+    fontSize: 12,
+    fontWeight: "bold",
+    marginRight: 10
+  },
+  priceValor: {
+    fontSize: 17,
+    fontWeight: "bold"
   }
 });

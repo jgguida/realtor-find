@@ -9,11 +9,10 @@ import {
 
 // import { Container } from './styles';
 
-export default function CadastroImovel({ navigation }) {
-  const handleStepTwo = () => {
-    navigation.navigate("CadastroStep2");
+export default function CadastroStep2({ navigation }) {
+  const handleStepTree = () => {
+    navigation.navigate("CadastroStep3");
   };
-
   return (
     <View style={styles.container}>
       <Text style={styles.logo}>Cadastro de Imóvel</Text>
@@ -21,7 +20,7 @@ export default function CadastroImovel({ navigation }) {
         <TextInput
           secureTextEntry
           style={styles.inputText}
-          placeholder="Localização"
+          placeholder="Tipo de imóvel"
           placeholderTextColor="#003f5c"
         />
       </View>
@@ -29,12 +28,29 @@ export default function CadastroImovel({ navigation }) {
         <TextInput
           secureTextEntry
           style={styles.inputText}
-          placeholder="Complemento"
+          placeholder="Metragem (m²)"
           placeholderTextColor="#003f5c"
         />
       </View>
-      <TouchableOpacity style={styles.loginBtn} onPress={() => handleStepTwo()}>
-        <Text style={styles.loginText}>ENVIAR</Text>
+      <View style={styles.inputViewText}>
+        <Text>
+          Nos indique sua espectativa de valor para seu imóvel. Lembrando que o
+          corretor irá efetuar uma avaliação do seu imóvel.
+        </Text>
+      </View>
+      <View style={styles.inputView}>
+        <TextInput
+          secureTextEntry
+          style={styles.inputText}
+          placeholder="Espectativa de Valor"
+          placeholderTextColor="#003f5c"
+        />
+      </View>
+      <TouchableOpacity
+        style={styles.loginBtn}
+        onPress={() => handleStepTree()}
+      >
+        <Text style={styles.loginText}>SALVAR</Text>
       </TouchableOpacity>
     </View>
   );
@@ -63,6 +79,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     justifyContent: "center",
     padding: 20
+  },
+  inputViewText: {
+    width: "80%",
+    marginBottom: 20
   },
   inputText: {
     height: 50,
