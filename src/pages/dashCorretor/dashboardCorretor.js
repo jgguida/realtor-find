@@ -90,25 +90,6 @@ export default function DashboardCorretor({ navigation }) {
           <Text style={styles.priceText}>R$ 1.500.000</Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.inputView}
-        onPress={() => {
-          navigation.navigate("SingleImovel", {
-            imovel_id: "João Jacinto"
-          });
-        }}
-      >
-        <View style={styles.infos}>
-          <Text>João Jacinto</Text>
-          <Text>Avenida das Dores, Jd. Amado</Text>
-          <Text>São Paulo - SP</Text>
-          <Text>Ultima Feedback: 17/02/2020</Text>
-        </View>
-        <View style={styles.price}>
-          <Text>Valor imóvel</Text>
-          <Text style={styles.priceText}>R$ 1.500.000</Text>
-        </View>
-      </TouchableOpacity>
     </View>
   );
 }
@@ -126,7 +107,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 25,
     color: "#4AA3DB",
-    marginTop: 35,
+    marginTop: 15,
     marginBottom: 30,
     alignSelf: "center",
     borderBottomColor: "#7DCAFB",

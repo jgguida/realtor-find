@@ -20,7 +20,17 @@ const Routes =
       {
         Corretor: createBottomTabNavigator({
           DashboardCorretor: {
-            screen: DashboardCorretor,
+            screen: createStackNavigator({
+              DashboardCorretor: {
+                screen: DashboardCorretor
+              },
+              SingleImovel: {
+                screen: SingleImovel,
+                navigationOptions: {
+                  title: "Imovel"
+                }
+              }
+            }),
             navigationOptions: {
               title: "Dashboard",
               tabBarIcon: <Icon name="home" size={20} color={"#4AA3DB"} />
@@ -67,12 +77,6 @@ const Routes =
         }),
         Common: createStackNavigator(
           {
-            SingleImovel: {
-              screen: SingleImovel,
-              navigationOptions: {
-                title: "Imovel"
-              }
-            },
             CadastroImovel: {
               screen: CadastroImovel,
               navigationOptions: {
