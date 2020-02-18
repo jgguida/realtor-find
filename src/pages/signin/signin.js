@@ -18,7 +18,7 @@ export default function SignIn({ navigation }) {
   };
 
   const handleLogin = () => {
-    navigation.navigate("DashboardCliente");
+    navigation.navigate("DashboardCorretor");
   };
 
   return (

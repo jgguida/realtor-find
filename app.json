@@ -17,9 +17,9 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "supportsTablet": true
-    },
+    // "ios": {
+    //   "supportsTablet": true
+    // },
     "android": {
       "package": "com.teoriadocaos.corretorideal",
       "versionCode": 1
