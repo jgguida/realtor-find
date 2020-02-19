@@ -1,4 +1,4 @@
-# Corretor Ideal
+# Corretor Ideal :green_heart:
 
 ![Corretor Ideal](https://i.imgur.com/eHbcthK.png)
 
